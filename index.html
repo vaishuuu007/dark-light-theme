@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dark/Light theme changer</title>
+</head>
+<style>
+    .theme-icon {
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    .active {
+        border: 1px solid #000;
+    }
+
+    .theme-dark {
+        background-color: #000;
+        color: #fff;
+
+    }
+
+    .theme-light {
+        background-color: #fff;
+        color: #000;
+    }
+</style>
+
+<body id="body">
+    <div>
+        <img src="C:\Users\shahaji waditke\Desktop\themechanger\images\dark.png" class="theme-icon active" id="img-dark"
+            onclick="darkMode()" />
+
+        <img src="C:\Users\shahaji waditke\Desktop\themechanger\images\light.png" class="theme-icon" id="img-light"
+            onclick="lightMode()" />
+
+        <h1>Dark-Light Theme Changer</h1>
+        <p>
+            Life is too short to worry about stupid things.
+            Have fun. Fall in love. Regret nothing, and don't let people bring you down.
+            Study, think, create, and grow. Teach yourself and teach others.
+            🌸🍁🌸
+            <p>
+            <span>
+                “When we honestly ask ourselves which person in our lives mean the most to us,
+                we often find that it is those who, instead of giving advice, solutions, or cures,
+                have chosen rather to share our pain and touch our wounds with a warm and tender hand.
+                The friend who can be silent with us in a moment of despair or confusion,
+                who can stay with us in an hour of grief and bereavement,
+                who can tolerate not knowing, not curing, not healing and face with us the reality of our powerlessness,
+                that is a friend who cares.”
+            </span>
+            </p>
+        </p>
+    </div>
+
+    <script>
+
+        function darkMode() {
+            const imgDark = document.getElementById('img-dark');
+            imgDark.classList.add('active');
+
+            const imgLight = document.getElementById('img-light');
+            imgDark.classList.remove('active');
+
+            const bodyElement = document.getElementById('body');
+            bodyElement.className = 'theme-dark';
+
+
+        }
+
+        function lightMode() {
+            const imgDark = document.getElementById('img-dark');
+            imgDark.classList.remove('active');
+
+            const imgLight = document.getElementById('img-light');
+            imgDark.classList.add('active');
+
+            const bodyElement = document.getElementById('body');
+            bodyElement.className = 'theme-light';
+
+        }
+    </script>
+
+</body>
+
+</html>
